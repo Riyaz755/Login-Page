@@ -1,0 +1,29 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+
+<H1 style='text-align:center'>Contact Us</H1>
+<div class='container'>
+    <form class='form' action ='/contact' method='POST'>
+        {% csrf_token %}
+     <div class='form-group'>
+        <label>Name</label><br/>
+        <input type='text' class='form-control'  id='name' name='name'  >
+     </div>
+     <div class='form-group'>
+        <label>Mobile Number</label><br/>
+        <input type='phone'  name='mobile' class='form-control'>
+     </div>
+     <div class='form-group'>
+     <label>Email</label><br/>
+        <input type='email' class='form-control' name='email'>
+     </div>
+     <div class='form-group'>
+        <button type='submit' class='btn btn-primary' >SubmiT</button>
+     </div>
+    </form>
+</div>
+
+
+
+{% endblock %}
